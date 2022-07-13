@@ -180,11 +180,12 @@ function getAllUnivisitedNeighbours(pos, visitedArr, dimensions) {
 }
 var grid;
 var visitedCellPositions = [];
+var numRows = 40;
+var numCols = 50;
 function setup() {
     createCanvas(windowWidth, windowHeight);
     noStroke();
-    grid = createGrid(40, 50);
-    carveFullMaze(grid.getDimensions());
+    grid = createGrid(numRows, numCols);
     noLoop();
 }
 function windowResized() {
@@ -192,6 +193,7 @@ function windowResized() {
 }
 function draw() {
     background(60);
+    carveFullMaze(grid.getDimensions());
     drawGrid(grid);
 }
 //# sourceMappingURL=build.js.map

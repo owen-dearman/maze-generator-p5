@@ -1,14 +1,15 @@
 
 let grid: Grid;
 let visitedCellPositions: GridPosition[] = [];
+let numRows = 40
+let numCols = 50
 
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   noStroke();
   //(rows, columns)
-  grid = createGrid(40, 50);
-  carveFullMaze(grid.getDimensions());
+  grid = createGrid(numRows, numCols);
   noLoop();
 }
 
@@ -18,6 +19,7 @@ function windowResized() {
 
 function draw() {
   background(60);
+  carveFullMaze(grid.getDimensions());
   drawGrid(grid);
 
   //UNCOMMENT FOR DEBUGGING PURPOSES
@@ -32,4 +34,3 @@ function draw() {
   //   counter++
   // }
 }
-
