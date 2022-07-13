@@ -11,6 +11,7 @@ interface Cell {
 interface Grid {
     getCellAt: (pos: GridPosition) => Cell;
     getDimensions: () => Dimensions;
+    getFirstUnvisitedCell: () => GridPosition | string
 }
 
 interface GridPosition {
